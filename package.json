@@ -1,18 +1,15 @@
 {
   "dependencies": {
     "dotenv": "^16.3.1",
-    "firebase": "^10.5.2",
-    "node-telegram-bot-api": "^0.64.0",
-    "react-firebase-hooks": "^5.1.1"
+    "node-telegram-bot-api": "^0.64.0"
   },
   "devDependencies": {
-    "@types/firebase": "^3.2.1",
     "@types/node-telegram-bot-api": "^0.61.11",
     "typescript": "^5.2.2"
   },
   "name": "telegram-bot",
-  "description": "Telegram bot notes.",
-  "version": "1.0.0",
+  "description": "Search anyone anime",
+  "version": "2.0.0",
   "main": "main.js",
   "type": "commonjs",
   "scripts": {

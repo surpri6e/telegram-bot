@@ -1,18 +1,15 @@
 # Telegram bot
 
-This bot can create notes for you. Main commads are *create*, *delete* and *show*. This bot was built on **node-telegram-bot-api** module. Thanks for you. 
+## Name of bot in telegram - @notes_sur_bot
 
-## For uasge
+**Current version -> search anyone anime.**
 
-1) *create* - create your note in next message after this command.
-1) *delete* - delete your note use number of note in next message after this command.
-1) *create* - show all your notes.
+Only 2 commands:
 
-### V 1.0.0
+1. /start - start bot.
+2. /search [title of anime] - search anime and full info about it.
 
-Main command were written in up. Just now function *delete* not working. 
-***In the process.***
+***Example: /search naruto***
 
 
-
-Thanks for use your bot.
+Last version -> simple notes bot.
