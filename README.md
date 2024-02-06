@@ -1,6 +1,6 @@
 # Telegram bot
 
-## Name of bot in telegram - @notes_sur_bot
+## Name of bot in telegram - @SurAnimeBot
 
 **Current version -> search anyone anime.**
 
@@ -11,5 +11,8 @@ Only 2 commands:
 
 ***Example: /search naruto***
 
+## API: [here](https://kitsu.io/api/edge/anime)
+
+Maybe i will expand this bot.
 
 Last version -> simple notes bot.
