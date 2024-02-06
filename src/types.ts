@@ -5,6 +5,6 @@ export interface IAnimeInfo {
     episodeCount: number;
     episodeLength: number;
     posterImage: {
-        medium: string;
+        small: string;
     }
 }

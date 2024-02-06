@@ -38,7 +38,7 @@ const animeInfoSearch = async (title: string) => {
   try {
     const result = await fetch(`https://kitsu.io/api/edge/anime?filter[text]=${title}`);
     const searchData = await result.json();
-    return searchData.data[0].attributes; //! Check here 
+    return searchData.data.length > 0 ? searchData.data[0].attributes : undefined;
   } catch (err: unknown) {
     console.log(err);
     if (err && typeof err === "string") {
@@ -50,7 +50,16 @@ const animeInfoSearch = async (title: string) => {
 const start = async (msg: TelegramBot.Message) => {
   const chatId = msg.chat.id;
   try {
-    await bot.sendMessage(chatId, "Bot is started to work.");
+    await bot.sendMessage(chatId,
+`
+<b>Bot is started to work.</b>
+Only 2 commands:
+
+<b>/start</b> - start bot.
+<b>/search</b> [title of anime] - search anime and full info about it.
+
+<b><i>Example: /search naruto</i></b>
+`, {parse_mode: 'HTML'});
   } catch (err: unknown) {
     console.log(err);
     if (err && typeof err === "string") {
@@ -68,18 +77,19 @@ const search = async (title: string, id: number) => {
         bot.sendMessage(chatId, "Write title on english language!");
         return;
       }
-      bot.sendMessage(chatId, res.posterImage.medium)
-      bot.sendMessage(chatId, `
+      bot.sendMessage(chatId, res.posterImage.small)
+      .then(() => {
+        bot.sendMessage(chatId, 
+`
 <b>Title: ${res.canonicalTitle}</b>
-
+          
 Episodes 🔷: <b>${res.episodeCount}</b>
 Length of episode ⏰: <b>${res.episodeLength} mins.</b>
 Rating ✨: <b>${res.averageRating}</b>
-
+          
 ${res.description}
-      `, {
-        parse_mode: 'HTML'
-      });
+`, {parse_mode: 'HTML'});
+      })
     })
     .catch((err: unknown) => {
       console.log(err);
@@ -97,12 +107,9 @@ ${res.description}
 
 bot.onText(new RegExp(EBotCommands.search), (msg) => {
   const chatId = msg.chat.id;
-  search(msg.text?.split(' ')[1] ? msg.text?.split(' ')[1] : '', chatId)
+  search(msg.text?.split('/search ')[1] ? msg.text?.split('/search ')[1] : 'naruto', chatId)
 });
 
-bot.on("message", async (msg) => {
-  const chatId = msg.chat.id;
-  
+bot.on("message", async (msg) => {  
   if(msg.text === EBotCommands.start) await start(msg)
-  //else if(msg.text != EBotCommands.start && msg.text != EBotCommands.search) bot.sendMessage(chatId, `It's not a command.`)
 });
