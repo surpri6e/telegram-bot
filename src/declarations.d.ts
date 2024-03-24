@@ -1,5 +1,5 @@
 namespace NodeJS {
-    interface ProcessEnv {
-        TOKEN: string;
-    }
+   interface ProcessEnv {
+      TOKEN: string;
+   }
 }
