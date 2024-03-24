@@ -1,18 +1,18 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "CommonJS",
-    "rootDir": "./src",
-    "moduleResolution": "node10",
-    "baseUrl": ".",
-    "declaration": true,
-    "declarationMap": true,                                
-    "outDir": "./dist",                                
-    "mapRoot": ".dist/map",                       
-    "declarationDir": "./dist/declaration",
-    "esModuleInterop": true,                        
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-  },
+   "compilerOptions": {
+      "target": "es2016",
+      "module": "CommonJS",
+      "rootDir": "./src",
+      "moduleResolution": "node10",
+      "baseUrl": ".",
+      "declaration": true,
+      "declarationMap": true,
+      "outDir": "./dist",
+      "mapRoot": ".dist/map",
+      "declarationDir": "./dist/declaration",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+   }
 }

@@ -1,22 +1,24 @@
 {
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "node-telegram-bot-api": "^0.64.0"
-  },
-  "devDependencies": {
-    "@types/node-telegram-bot-api": "^0.61.11",
-    "typescript": "^5.2.2"
-  },
-  "name": "telegram-bot",
-  "description": "Search anyone anime",
-  "version": "2.0.0",
-  "main": "main.js",
-  "type": "commonjs",
-  "scripts": {
-    "build": "tsc",
-    "debug": "tsc && node dist/bot.js",
-    "start": "node dist/bot.js"
-  },
-  "author": "surpri6e",
-  "license": "MIT"
+   "dependencies": {
+      "dotenv": "^16.3.1",
+      "node-telegram-bot-api": "^0.64.0"
+   },
+   "devDependencies": {
+      "@types/node-telegram-bot-api": "^0.61.11",
+      "prettier": "^3.2.5",
+      "typescript": "^5.2.2"
+   },
+   "name": "telegram-bot",
+   "description": "Search anyone anime",
+   "version": "2.0.0",
+   "main": "main.js",
+   "type": "commonjs",
+   "scripts": {
+      "build": "tsc",
+      "debug": "tsc && node dist/bot.js",
+      "start": "node dist/bot.js",
+      "format": "prettier --write '**/*.{js,jsx,ts,tsx,css,json,scss}' --config ./.prettierrc"
+   },
+   "author": "surpri6e",
+   "license": "MIT"
 }
