@@ -11,12 +11,12 @@
    "name": "telegram-bot",
    "description": "Search anyone anime",
    "version": "2.0.0",
-   "main": "main.js",
+   "main": "index.ts",
    "type": "commonjs",
    "scripts": {
       "build": "tsc",
-      "debug": "tsc && node dist/bot.js",
-      "start": "node dist/bot.js",
+      "debug": "tsc && node dist/index.js",
+      "start": "node dist/index.js",
       "format": "prettier --write '**/*.{js,jsx,ts,tsx,css,json,scss}' --config ./.prettierrc"
    },
    "author": "surpri6e",
